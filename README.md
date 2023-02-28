@@ -2,6 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/fuwasegu/php-enum-util/badge.svg?branch=master)](https://coveralls.io/github/fuwasegu/php-enum-util?branch=master)
 ![example workflow](https://github.com/fuwasegu/php-enum-util/actions/workflows/ci.yml/badge.svg)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![PHP Version Require](http://poser.pugx.org/fuwasegu/php-enum-util/require/php)](https://packagist.org/packages/fuwasegu/php-enum-util)
+[![Total Downloads](http://poser.pugx.org/fuwasegu/php-enum-util/downloads)](https://packagist.org/packages/fuwasegu/php-enum-util)
 
 The extension library for PHP native enum.
 
