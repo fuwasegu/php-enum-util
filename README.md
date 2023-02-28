@@ -111,3 +111,27 @@ Status::values();
 // Join Enum values with a string
 Status::implodeValues();
 ```
+
+### HasNames trait
+This trait is the name version of the `cases()` method originally implemented in Enum, and provides auxiliary methods.
+
+```php
+enum Status: string
+{
+    use HasNames;
+
+    case ACTIVE = 'active';
+
+    case INACTIVE = 'inactive';
+
+    case RETIED = 'retired';
+}
+```
+
+```php
+// Getter for Enum names
+Status::names();
+
+// Join Enum names with a string
+Status::implodeNames();
+```

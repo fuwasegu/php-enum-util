@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace Fuwasegu\PhpEnumUtil\Tests\Enums;
 
 use Fuwasegu\PhpEnumUtil\HasLabel;
+use Fuwasegu\PhpEnumUtil\HasNames;
 use Fuwasegu\PhpEnumUtil\HasValues;
 
 enum Capital: int
 {
     use HasLabel;
     use HasValues;
+    use HasNames;
 
     case TOKYO = 1;
 
