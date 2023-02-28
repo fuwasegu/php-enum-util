@@ -135,3 +135,34 @@ Status::names();
 // Join Enum names with a string
 Status::implodeNames();
 ```
+
+### Comparable trait
+This trait provides a method for easy comparison of Bakced Enums
+
+```php
+enum Status: string
+{
+    use Comparable;
+
+    case ACTIVE = 'active';
+
+    case INACTIVE = 'inactive';
+
+    case RETIED = 'retired';
+}
+```
+
+```php
+// Compare Enum peer to peer
+$maybeActive = Status::ACTIVE;
+Status::ACTIVE->is($maybeActive); // true
+Status::INACTIVE->isNot($maybeActive); // false
+
+// Attempts to convert the compared int or string to an Enum with Enum::tryFrom before comparing
+// If tryFrom is null, `isFrom()` returns false and `isNotFrom()` returns true.
+$value = 'active';
+Status::ACTIVE->isFrom($value); // true
+Status::INACTIVE->isNotFrom($value); // false
+Status::ACTIVE->isFrom('foo'); // false
+Status::ACTIVE->isNotFrom('foo') // true
+```

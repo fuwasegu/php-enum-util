@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Fuwasegu\PhpEnumUtil\Tests\Enums;
 
+use Fuwasegu\PhpEnumUtil\Comparable;
 use Fuwasegu\PhpEnumUtil\HasDescription;
 use Fuwasegu\PhpEnumUtil\HasValues;
 
@@ -11,6 +12,7 @@ enum Status: string
 {
     use HasDescription;
     use HasValues;
+    use Comparable;
 
     case ACTIVE = 'active';
 
